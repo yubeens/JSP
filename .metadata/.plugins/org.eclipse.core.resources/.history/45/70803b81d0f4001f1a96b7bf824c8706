@@ -1,0 +1,96 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FORM EXAM</title>
+<script>
+function check() {
+    // 이름과 나이 값 가져오기
+    var name = document.getElementById("name").value;
+    var age = document.getElementsByName("age")[0].value;
+    
+    // 이름과 나이가 비어있는지 확인
+    if (name == "") {
+        alert("이름을 입력하세요!");
+        return;  // 이름이 비어 있으면 전송하지 않음
+    }
+    if (age == "") {
+        alert("나이를 입력하세요!");
+        return;  // 나이가 비어 있으면 전송하지 않음
+    }
+
+    // 성별이 선택되지 않았으면 경고
+    var gender = document.getElementsByName("gender");
+    var genderChecked = false;
+    for (var i = 0; i < gender.length; i++) {
+        if (gender[i].checked) {
+            genderChecked = true;
+            break;
+        }
+    }
+    if (!genderChecked) {
+        alert("성별을 선택하세요!");
+        return;  // 성별을 선택하지 않으면 전송하지 않음
+    }
+
+    // 관심분야 체크 여부 확인 (하나 이상 선택했는지)
+    var hobbies = document.getElementsByName("hobby");
+    var hobbyChecked = false;
+    for (var i = 0; i < hobbies.length; i++) {
+        if (hobbies[i].checked) {
+            hobbyChecked = true;
+            break;
+        }
+    }
+    if (!hobbyChecked) {
+        alert("관심 분야를 하나 이상 선택하세요!");
+        return;  // 관심분야를 하나 이상 선택하지 않으면 전송하지 않음
+    }
+
+    // 직업이 선택되지 않았으면 경고
+    var job = document.getElementById("job").value;
+    if (job == "") {
+        alert("직업을 선택하세요!");
+        return;  // 직업이 선택되지 않으면 전송하지 않음
+    }
+
+    // 모든 검사 통과하면 폼 제출
+    document.forms[0].submit();  // 폼을 제출
+}
+	
+}
+</script>
+</head>
+<body>
+<form action="formResult.jsp" method="post">
+이름:<input type="text" name="name" id="name"><br>
+나이:<input type="number" name="age"><br>
+성별:
+<label for="man">남자</label>
+	<input type="radio" name="gender" id="man" value="남자" checked>
+<label for="woman">여자</label>
+	<input type="radio" name="gender" id="woman" value="여자"><br>
+관심분야:
+<label for ="h1">운동</label>
+	<input type="checkbox" name="hobby" id="h1" value="운동">
+<label for ="h2">게임</label>
+	<input type="checkbox" name="hobby" id="h2" value="게임">
+<label for ="h3">등산</label>
+	<label><input type="checkbox" name="hobby" id="h3" value="등산">
+<label for ="h4">영화</label>
+<label><input type="checkbox" name="hobby" id="h4" value="영화"><br>
+<label for ="job">직업:</label>
+<select name = job id="job">
+	<option value="사무직">사무직</option>
+	<option value="전문직">전문직</option>
+	<option value="서비스직">서비스직</option>
+	<option value="예체능">예체능</option>
+	<option value="기타">기타</option>
+</select><br>
+<input type=button value="button전송" onclick="check()">
+</form>
+
+</body>
+</html>

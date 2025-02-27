@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    </head>
+    
+    <body>
+        <form action="formResult.jsp">
+            <fieldset>
+                <legend>기본 정보</legend>
+                <label for="name">이름:    </label>
+                <input type="text" name="name" id="name" required>
+                <br>
+                <label for="age">나이:    </label>
+                <input type="number" name="age" id="age" required>
+                <br>
+                성별: 
+                <label for="male">    남자</label>
+                <input type="radio" name="gender" class="gender" id="male" checked>
+                <label for="female">여자</label>
+                <input type="radio" name="gender" class="gender" id="female">
+                <br>
+                관심분야:
+                <label for="hb1">    운동</label>
+                <input type="checkbox" name="hobby" class="hobby" id="hb1">
+                <label for="hb2">게임</label>
+                <input type="checkbox" name="hobby" class="hobby" id="hb2">
+                <label for="hb3">등산</label>
+                <input type="checkbox" name="hobby" class="hobby" id="hb3">
+                <label for="hb4">영화</label>
+                <input type="checkbox" name="hobby" class="hobby" id="hb4">
+                <br>
+                <label for="job">직업:    </label>
+                <select name=job id="job">
+                    <option>사무직</option>
+                    <option>전문직</option>
+                    <option>서비스직</option>
+                    <option>예체능</option>
+                    <option>기타</option>
+                </select>
+            </fieldset>
+            <button id="button">전송</button>
+        </form>
+    </body>
+</html>
