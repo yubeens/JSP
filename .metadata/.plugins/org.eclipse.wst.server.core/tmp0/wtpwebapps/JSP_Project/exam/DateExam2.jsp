@@ -1,4 +1,4 @@
-<%@page import="com.exea.DateBean"%>
+<%@page import="com.exem.DateBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 

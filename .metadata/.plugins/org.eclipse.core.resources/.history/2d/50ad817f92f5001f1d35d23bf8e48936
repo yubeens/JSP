@@ -1,0 +1,44 @@
+<%@page import="oracle.net.jdbc.TNSAddress.Address"%>
+<%@page import="com.address.AddressDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<%
+AddressDAO dao = new AddressDAO();
+int num = Integer.parseInt(request.getParameter("num"));
+Address address = dao.detail(num);
+%>
+</head>
+<body>
+<h3>상세보기</h3>
+<form>
+ <table>
+ 	<tr>
+ 	 <th>번호</th>
+ 	 <td><input type="text" value="<%=address.getNum()%>"></td>
+ 	 </tr>
+ 	<tr>
+ 	 <th>이름</th>
+ 	 <td><input type="text" value="<%=address.getName()%>"></td>
+ 	</tr>
+ 	<tr>
+ 	 <th>우편번호</th>
+ 	 <td><input type="text" value="<%=address.getZipcode()%>"></td>
+ 	</tr>
+ 	<tr>
+ 	 <th>주소</th>
+ 	 <td><input type="text" value="<%=address.getAddress()%>"></td>
+ 	</tr>
+ 	<tr>
+ 	 <th>전화번호</th>
+ 	 <td><input type="text" value="<%=address.getTel()%>"></td>
+ 	</tr>
+ 	 
+</table></form>
+~~~~~~~
+</body>
+</html>

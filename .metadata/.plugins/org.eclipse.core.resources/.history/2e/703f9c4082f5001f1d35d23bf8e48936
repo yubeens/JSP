@@ -1,0 +1,40 @@
+<%@page import="com.address.Address"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.address.AddressDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<%
+AddressDAO dao = new AddressDAO();
+ArrayList<Address>alist= dao.list();
+%>
+<body>
+<h3>ADDRESS LIST</h3>
+<table>
+	<tr>
+		<th>번호</th>
+		<th>이름</th>
+		<th>주소</th>
+		<th>전화번호</th>
+	</tr>
+<%
+	for(Address ad:alist){
+%>
+<tr> 
+	<td><%=ad.getNum() %>
+	<td><%=ad.getName() %>
+	<td><%=ad.getAddress() %>
+	<td><%=ad.getTel() %>
+</tr>
+<%
+	}
+%>
+</table>
+~~~~~
+</body>
+</html>

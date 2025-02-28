@@ -33,7 +33,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<form action="scoreResult.jsp" id="frm">
+<form action="scoreResult2.jsp" id="frm">
 이름:<input type="text" name="name" id="name"><br/>
 국어:<input type="text" name="kor" id="kor"><br/>
 영어:<input type="text" name="eng" id="eng"><br/>

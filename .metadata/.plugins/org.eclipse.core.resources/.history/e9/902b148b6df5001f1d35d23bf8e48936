@@ -1,0 +1,19 @@
+<%@page import="com.exea.ScoreBean"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<%
+ request.setCharacterEncoding("utf-8");
+ 
+%>
+<jsp:useBean id="sb"class="com.exam.ScoreBean"></jsp:useBean>
+<jsp:setProperty property="*" name="sb"/>
+<body>
+
+</body>
+</html>
