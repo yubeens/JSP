@@ -48,6 +48,65 @@ public class AddressDAO {
 			closeConnection(con,ps,null,null);
 		}
 	}
+	//검색포함 전체보기
+	public ArrayList<Address>list(String field, String word){
+		Connection con = null;
+		Statement st = null;
+		ResultSet rs = null;
+		ArrayList<Address>alist=new ArrayList<Address>();
+		String sql="";
+		
+		try {
+			con=DriverManager.getConnection(url,user,pwd);
+			st=con.createStatement();
+			if(word.equals("")) { //검색아님
+				sql="select * from address";
+			}else { //검색
+				sql="select * from address where "+field+ " like '%"+word+"%'";
+			}
+			rs=st.executeQuery(sql);
+			while(rs.next()) {
+				Address ad = new Address();
+				ad.setAddress(rs.getString("address"));
+				ad.setName(rs.getString("name"));
+				ad.setNum(rs.getInt("num"));
+				ad.setTel(rs.getString("tel"));
+				ad.setZipcode(rs.getString("zipcode"));
+				alist.add(ad);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return alist;
+	}
+	//검색 포함 갯수
+	public int getCount(String field,String word) {
+		Connection con = null;
+		Statement st = null;
+		ResultSet rs = null;
+		String sql="";
+		int count=0;
+		
+		try {
+			con=DriverManager.getConnection(url,user,pwd);
+			st=con.createStatement();
+			if(word.equals("")) {
+				sql="select count(*) from address";
+			}else { //검색
+				sql="select count(*) from address where "+field + " like'%"+word+"%'";
+			}
+			rs=st.executeQuery(sql);
+			if(rs.next()) {
+				count=rs.getInt(1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			closeConnection(con, null, st, rs);
+		}
+		return count;
+	}
 	
 	
 	//전체보기
@@ -178,6 +237,39 @@ public class AddressDAO {
 		return address;
 	}
 	
+	
+	//우편번호 검색
+	public ArrayList<ZipCode> zipcodeRead(String dong) {
+		Connection con = null;
+		Statement st = null;
+		ResultSet rs = null;
+		ArrayList<ZipCode> zarr = new ArrayList<ZipCode>();
+		
+		try {
+			con=DriverManager.getConnection(url,user,pwd);
+			String sql="select * from zipcode where dong like '%"+dong+"%'";
+			System.out.println(sql);
+			st=con.createStatement();
+			rs=st.executeQuery(sql);
+			while(rs.next()) {
+				ZipCode z = new ZipCode();
+				z.setBunji(rs.getString("bunji"));
+				z.setDong(rs.getString("dong"));
+				z.setGugun(rs.getString("gugun"));
+				z.setSeq(rs.getInt("seq"));
+				z.setSido(rs.getString("sido"));
+				z.setZipcode(rs.getString("zipcode"));
+				zarr.add(z);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			closeConnection(con, null, st, rs);
+		}
+		return zarr;
+		
+	}
 	
 	//------
 	private void closeConnection(Connection con,PreparedStatement ps, Statement st, ResultSet rs) {

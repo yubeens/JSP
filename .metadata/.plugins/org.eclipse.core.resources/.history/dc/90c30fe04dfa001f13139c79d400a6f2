@@ -1,0 +1,48 @@
+<%@page import="com.address.ZipCode"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.address.AddressDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(function(){
+	$("#send").click(function(){
+		sendIt
+	})
+})
+
+var sendIt=function(){
+	if($("#dong").val()==""{
+		alert("동 이름을 입력하세요");
+		return false;
+	}
+	$.getJSON("zipProc.jsp",
+			{"dong":$("#dong").val()}, //두번째는 가지고 가는 값 , 세번째는 콜백
+			function(resp){
+				alert(resp)			
+		
+		}//콜백함수 function
+	}//getJSON
+}//sendit
+
+</script>
+</head>
+<body>
+<h3>우편번호 찾기</h3>
+<form action="zipCheck.jsp" id="frm">
+  <table>
+      <tr>
+          <td>동이름 입력
+          <input type = text id="dong" name="dong">
+           <button type ="button" id="send">검색</button> </td>
+      </tr>
+      <tr>
+    </table>
+</form>
+</body>
+</html>

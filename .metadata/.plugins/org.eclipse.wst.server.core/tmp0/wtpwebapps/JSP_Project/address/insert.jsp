@@ -5,6 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+function zipfinder(){
+	window.open("zipCheck.jsp","","width=700 height=400")
+	
+}
+</script>
 </head>
 <body>
 <div align="right">
@@ -21,13 +27,13 @@
             <tr>
                 <td>우편번호</td>
                 <td>
-                    <input type="text" size=5 name="zipcode">
-                    <button type="button">검색</button>
+                    <input type="text" size=5 id="zipcode" name="zipcode" readonly="readonly">
+                    <button type="button" onclick="zipfinder()">검색</button>
                 </td>
             </tr>
             <tr>
                 <td>주소</td>
-                <td><input type="text" size=50 name="address"></td>
+                <td><input type="text" size=50 name="address" id="addr"></td>
             </tr>
             <tr>
                 <td>전화번호</td>

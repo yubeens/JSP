@@ -12,7 +12,13 @@ AddressDAO dao = new AddressDAO();
 int num = Integer.parseInt(request.getParameter("num"));
 Address address = dao.detail(num);
 %>
+
 <script>
+function zipfinder(){
+	window.open("zipCheck.jsp","","width=700 height=400")
+	
+}
+
 function del(){
 	if(confirm("정말 삭제 할까요?")){
 		location.href="deleteProcess.jsp?num=<%=num%>";
@@ -37,11 +43,12 @@ function del(){
  	</tr>
  	<tr>
  	 	<th>우편번호</th>
- 	 	<td><input type="text" name="zipcode" value="<%=address.getZipcode()%>" size=7></td>
+ 	 	<td><input type="text" name="zipcode" id="zipcode" value="<%=address.getZipcode()%>" size=7 readonly="readonly">
+ 	 	<button type="button" onclick="zipfinder()">검색</button></td>
  	</tr>
  	<tr>
  	 	<th>주소</th>
- 	 	<td><input type="text" name="address" value="<%=address.getAddress()%>" size=50></td>
+ 	 	<td><input type="text" name="address" id="addr" value="<%=address.getAddress()%>" size=50></td>
  	</tr>
  	<tr>
  	 	<th>전화번호</th>
