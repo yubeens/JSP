@@ -142,7 +142,33 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\JSP_Work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\JSP_Work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JSP_Project" path="/JSP_Project" reloadable="true" source="org.eclipse.jst.jee.server:JSP_Project"/><Context docBase="C:\JSP_Work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ServletProject01" path="/ServletProject01" reloadable="true" source="org.eclipse.jst.jee.server:ServletProject01"/></Host>
+      <Context docBase="C:\JSP_Work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JSP_Project" path="/JSP_Project" reloadable="true" source="org.eclipse.jst.jee.server:JSP_Project"/><Context docBase="C:\JSP_Work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ServletProject01" path="/ServletProject01" reloadable="true" source="org.eclipse.jst.jee.server:ServletProject01"/>
+      <Context docBase="C:\JSP_Work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JSP_Project02" path="/JSP_Project02" reloadable="true" source="org.eclipse.jst.jee.server:JSP_Project02">
+
+    <!-- Default set of monitored resources. If one of these changes, the    -->
+    <!-- web application will be reloaded.                                   -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <WatchedResource>WEB-INF/tomcat-web.xml</WatchedResource>
+    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+	<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxIdle="20" maxTotal="20" maxWaitMillis="-1" name="jdbc/jsp" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:xe" username="scott"/>
+    <!-- Uncomment this to enable session persistence across Tomcat restarts -->
+    <!--
+    <Manager pathname="SESSIONS.ser" />
+    -->
+</Context><Context docBase="C:\JSP_Work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ServletProject02" path="" reloadable="true" source="org.eclipse.jst.jee.server:ServletProject02">
+
+    <!-- Default set of monitored resources. If one of these changes, the    -->
+    <!-- web application will be reloaded.                                   -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <WatchedResource>WEB-INF/tomcat-web.xml</WatchedResource>
+    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+	<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxIdle="20" maxTotal="20" maxWaitMillis="-1" name="jdbc/jsp" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:xe" username="scott"/>
+    <!-- Uncomment this to enable session persistence across Tomcat restarts -->
+    <!--
+    <Manager pathname="SESSIONS.ser" />
+    -->
+</Context></Host>
+      
     </Engine>
   </Service>
 </Server>
