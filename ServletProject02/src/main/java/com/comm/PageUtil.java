@@ -6,6 +6,8 @@ public class PageUtil {
 	private int startPage;
 	private int endPage;
 	private int currentPage;
+	private String searchField;
+	private String searchWord;
 	
 	//getter, setter
 	public int getTotPage() {
@@ -37,6 +39,18 @@ public class PageUtil {
 	}
 	public void setCurrentPage(int currentPage) {
 		this.currentPage = currentPage;
+	}
+	public String getSearchField() {
+		return searchField;
+	}
+	public void setSearchField(String searchField) {
+		this.searchField = searchField;
+	}
+	public String getSearchWord() {
+		return searchWord;
+	}
+	public void setSearchWord(String searchWord) {
+		this.searchWord = searchWord;
 	}
 	
 	

@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="COMMENTS" directorySegmentName="seg_0" id="FCAF0CC1-BE21-E33D-CE13-EAD0F8762DF9">
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<schemaObject>A8F37156-92DB-7D1B-82FC-CC2477B51849</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>ACA4A0E9-F7F9-42D2-92A8-066DBCE18FDE</segment>
+<tableSpace>15A26C4E-A2AA-985F-EE7B-763C1BE5A236</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="BNUM" id="376AC8EC-B0C6-37C5-F05A-080980FDD55D">
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REGDATE" id="8C5EC9AC-C5D9-1AF8-B177-F85146BE3474">
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CNUM" id="A291D226-205C-7FE3-2A07-78F764C409DD">
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USERID" id="C7AD366D-65CC-6BDB-4DC2-2E83D8ADD1D8">
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MSG" id="D23F9FE3-C509-8789-8BF5-AE7CAAD71F98">
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="COMMENTS_PK" id="F8C73C7E-0FA9-8A21-F52B-4E2370C6537B">
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<schemaObject>A8F37156-92DB-7D1B-82FC-CC2477B51849</schemaObject>
+<segment>F7D9C56B-E00B-47DC-9F39-887A1559638A</segment>
+<tableSpace>15A26C4E-A2AA-985F-EE7B-763C1BE5A236</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="COMMENTS_FK1" id="E6CF1558-34DA-60F8-5CA8-B381302064E6">
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="COMMENTS_PK" id="1896DA51-9745-514F-B6A0-C13DAFB6FDE9">
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<segment>F7D9C56B-E00B-47DC-9F39-887A1559638A</segment>
+<tableSpace>15A26C4E-A2AA-985F-EE7B-763C1BE5A236</tableSpace>
+<existingIndex>F8C73C7E-0FA9-8A21-F52B-4E2370C6537B</existingIndex>
+<indexSegment>F7D9C56B-E00B-47DC-9F39-887A1559638A</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

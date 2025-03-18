@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7AA094D3-2038-358B-F910-B9FB2C0DEA98" schemaObject="A8F37156-92DB-7D1B-82FC-CC2477B51849" name="BOARDS">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>SCOTT</sourceObjSchema>
+<sourceObjName>BOARDS</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 02:37:18 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NUM" id="3EE58EDE-3BC7-45C5-A803-4A6DDE075926">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>BOARDS</sourceObjSchema>
+<sourceObjName>NUM</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 02:37:18 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>&quot;SCOTT&quot;.&quot;BOARDS_SEQ&quot;.&quot;NEXTVAL&quot;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USERID" id="BFB068CC-4FE1-9E28-3FCC-4445E0AB2CFF">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>BOARDS</sourceObjSchema>
+<sourceObjName>USERID</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 02:37:18 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUBJECT" id="9F0102A1-7EDF-45B0-B682-96EF8661EC66">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>BOARDS</sourceObjSchema>
+<sourceObjName>SUBJECT</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 02:37:18 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="213BA9FB-36AD-691C-E334-E7928A7707FC">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>BOARDS</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 02:37:18 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="READCOUNT" id="E31DB68C-8C54-F9E5-9A6E-A49B357879FB">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>BOARDS</sourceObjSchema>
+<sourceObjName>READCOUNT</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 02:37:18 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTENT" id="3D671CB9-B74F-2C37-C889-6FC492F761E1">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>BOARDS</sourceObjSchema>
+<sourceObjName>CONTENT</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 02:37:18 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGDATE" id="354F1A20-2D27-2177-A075-8BDF81491A56">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>BOARDS</sourceObjSchema>
+<sourceObjName>REGDATE</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 02:37:18 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2F449B46-05BA-04F3-C8F6-66743AEFB321" name="BOARDS_PK">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>SCOTT</sourceObjSchema>
+<sourceObjName>BOARDS_PK</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 02:37:20 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EE58EDE-3BC7-45C5-A803-4A6DDE075926"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71EDF383-CDE3-E02A-13AD-E78DBF4E92A5" schemaObject="A8F37156-92DB-7D1B-82FC-CC2477B51849" name="BOARDS_PK">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>SCOTT</sourceObjSchema>
+<sourceObjName>BOARDS_PK</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 02:37:20 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EE58EDE-3BC7-45C5-A803-4A6DDE075926"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

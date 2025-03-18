@@ -15,7 +15,7 @@
  })
  </script>
 <div class="container mt-5">
-	<h2>Board LIST(${count })</h2>
+	<h2>Board LIST(${count})</h2>
 	<div class="mt-5 mb-3">
 		<button class="btn btn-secondary" id="btnWrite">글쓰기</button>
 	</div>
@@ -31,10 +31,10 @@
 		      </tr>
 		  </thead>
 		  <tbody>
-		  <c:forEach items="${barr }" var="board">
+		  <c:forEach items="${barr}" var="board" varStatus="st">
 		  	<tr>
-		  			<td>${board.num }</td>
-		  			<td><a href="view.do?num=${board.num }">${board.subject }</a></td>
+		  			<td>${rowNo-st.index}</td>
+		  			<td><a href="view.do?num=${board.num}">${board.subject}</a></td>
 		  			<td>${board.userid }</td>
 		  			<td>${board.regdate }</td>
 		  			<td>${board.readcount }</td>
@@ -46,12 +46,12 @@
    <ul class="pagination">
  	<!-- 이전 -->
   	<c:if test ="${p.startPage > p.blockPage}">
-   	 	<li class="page-item"><a class="page-link" href="list.do?pageNum=${p.startPage-p.blockPage}">Previous</a></li>
+   	 	<li class="page-item"><a class="page-link" href="list.do?pageNum=${p.startPage-p.blockPage}&searchField=${p.searchField}&searchWord=${p.searchWord}">Previous</a></li>
     </c:if>
     <!-- 페이지 번호 -->
     <c:forEach begin="${p.startPage}" end="${p.endPage}" var="i">
       <c:if test="${p.currentPage!=i}">
-      	 <li class="page-item"><a class="page-link" href="list.do?pageNum=${i}">${i}</a></li>
+      	 <li class="page-item"><a class="page-link" href="list.do?pageNum=${i}&searchField=${p.searchField}&searchWord=${p.searchWord}">${i}</a></li>
       </c:if>
        <c:if test="${p.currentPage==i}">
       	 <li class="page-item active"><a class="page-link" href="#">${i}</a></li>
@@ -59,7 +59,7 @@
      </c:forEach>
     <!-- 다음 -->
      <c:if test ="${p.endPage < p.totPage}">
-   		 <li class="page-item"><a class="page-link" href="list.do?pageNum=${p.endPage+1}">Next</a></li>
+   		 <li class="page-item"><a class="page-link" href="list.do?pageNum=${p.endPage+1}&searchField=${p.searchField}&searchWord=${p.searchWord}">Next</a></li>
      </c:if>
     </ul>
     <form class="d-inline-flex">

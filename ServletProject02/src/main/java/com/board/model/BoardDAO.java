@@ -26,6 +26,12 @@ public interface BoardDAO {
 	//조회수 증가
 	public void updateReadCount(int num);
 	public void close();
+	///////
 	
-	
+	//추가
+	public void commentInsert(CommentDTO comment);
+	//전체보기
+	public ArrayList<CommentDTO> commentList(int bnum);
+	//갯수
+	public int commentCount(int bunm);
 }

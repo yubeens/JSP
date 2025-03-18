@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FCAF0CC1-BE21-E33D-CE13-EAD0F8762DF9" schemaObject="A8F37156-92DB-7D1B-82FC-CC2477B51849" name="COMMENTS">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>SCOTT</sourceObjSchema>
+<sourceObjName>COMMENTS</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CNUM" id="A291D226-205C-7FE3-2A07-78F764C409DD">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>COMMENTS</sourceObjSchema>
+<sourceObjName>CNUM</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USERID" id="C7AD366D-65CC-6BDB-4DC2-2E83D8ADD1D8">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>COMMENTS</sourceObjSchema>
+<sourceObjName>USERID</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MSG" id="D23F9FE3-C509-8789-8BF5-AE7CAAD71F98">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>COMMENTS</sourceObjSchema>
+<sourceObjName>MSG</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGDATE" id="8C5EC9AC-C5D9-1AF8-B177-F85146BE3474">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>COMMENTS</sourceObjSchema>
+<sourceObjName>REGDATE</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BNUM" id="376AC8EC-B0C6-37C5-F05A-080980FDD55D">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>COMMENTS</sourceObjSchema>
+<sourceObjName>BNUM</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1EC13957-87B2-0F67-C203-39A89B708241" referredColumn="3EE58EDE-3BC7-45C5-A803-4A6DDE075926"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1896DA51-9745-514F-B6A0-C13DAFB6FDE9" name="COMMENTS_PK">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>SCOTT</sourceObjSchema>
+<sourceObjName>COMMENTS_PK</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A291D226-205C-7FE3-2A07-78F764C409DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F8C73C7E-0FA9-8A21-F52B-4E2370C6537B" schemaObject="A8F37156-92DB-7D1B-82FC-CC2477B51849" name="COMMENTS_PK">
+<sourceConnName>SCOTT</sourceConnName>
+<sourceObjSchema>SCOTT</sourceObjSchema>
+<sourceObjName>COMMENTS_PK</sourceObjName>
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A291D226-205C-7FE3-2A07-78F764C409DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E6CF1558-34DA-60F8-5CA8-B381302064E6" name="COMMENTS_FK1">
+<createdBy>it</createdBy>
+<createdTime>2025-03-18 03:33:26 UTC</createdTime>
+<ownerDesignName>ss</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="376AC8EC-B0C6-37C5-F05A-080980FDD55D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

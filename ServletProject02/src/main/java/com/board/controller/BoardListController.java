@@ -7,6 +7,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import com.board.model.BoardDAO;
 import com.board.model.BoardDAOImpl;
@@ -33,7 +36,29 @@ public class BoardListController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
+		
+		//검색 관련
+		Map<String, Object> map = new HashMap<>();
+		String searchWord = request.getParameter("searchWord")==null?"":request.getParameter("searchWord");
+		String searchField = request.getParameter("searchField");
+		if(!(searchWord.equals(""))) {
+			map.put("searchField", searchField);
+			map.put("searchWord", searchWord);
+		}
+		
+//  	p.506내용
+//		String searchField = request.getParameter("searchField");
+//		String searchWord = request.getParameter("searchWord");
+//
+//		if(searchWord != null) {
+//			map.put("searchField", searchField);
+//			map.put("searchWord", searchWord);
+//		}
+
 		BoardDAO dao = new BoardDAOImpl();
+		
+		//검색 포함 게시글 갯수
+		int count =dao.selectCount(map);
 		//페이징 관련
 		String pageNum = request.getParameter("pageNum")==null?"1":request.getParameter("pageNum");
 		int currentPage = Integer.parseInt(pageNum);
@@ -41,8 +66,14 @@ public class BoardListController extends HttpServlet {
 		int startRow = (currentPage-1)*pageSize +1;
 		int endRow = currentPage*pageSize;
 		
-		ArrayList<BoardDTO> blist =  dao.boardList(startRow,endRow); //예)100
-		int count = dao.boardCount(); //3
+		map.put("start",startRow);
+		map.put("end",endRow);
+		
+		List<BoardDTO> blist = dao.selectListPage(map);
+		int rowNo = count - (currentPage-1)*pageSize; //페이지 카운트 수
+		
+		//ArrayList<BoardDTO> blist =  dao.boardList(startRow,endRow); //예)100
+		//int count = dao.boardCount(); //3
 		//총 페이지 수
 		int totPage = count/pageSize+(count%pageSize==0?0:1); //1
 		int blockPage = 3;
@@ -56,12 +87,16 @@ public class BoardListController extends HttpServlet {
 		page.setEndPage(endPage);
 		page.setCurrentPage(currentPage);
 		page.setTotPage(totPage);
+		page.setSearchField(searchField);
+		page.setSearchWord(searchWord);
 		request.setAttribute("p", page);
 		
-		
 		dao.close();
+		request.setAttribute("rowNo", rowNo);
 		request.setAttribute("barr", blist);
 		request.setAttribute("count", count);
+		request.setAttribute("page", page);
+		
 		request.getRequestDispatcher("boardList.jsp").forward(request, response);
 	}
 

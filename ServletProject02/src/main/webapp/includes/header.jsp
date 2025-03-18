@@ -23,6 +23,14 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="#">PRODUCT</a>
 	      </li>
+	      <c:if test="${sessionScope.suser.admin==1}">
+	       <li class="nav-item">
+	         <a class="nav-link" href="#">회원목록</a>
+	       </li>
+	       <li class="nav-item">
+	         <a class="nav-link" href="/product/pInsert.do">상품등록</a>
+	       </li>
+	      </c:if>
      </ul>
       <ul class="navbar-nav">
          <c:if test="${sessionScope.suser.admin==1}">
