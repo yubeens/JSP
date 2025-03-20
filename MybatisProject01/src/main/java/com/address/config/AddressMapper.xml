@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.address.config.AddressMapper">
+  <insert id="insertData" parameterType="com.address.model.AddressDTO">
+  insert into address(num,name,zipcode,addr,tel)
+  values(address_seq.nextval,#{name},#{zipcode},#{addr},#{tel})
+  </insert>
+  
+  <select id="listData" resultType="com.address.model.AddressDTO">
+  select * from address order by num desc
+  </select>
+  
+  <select id="countData" resultType="Integer">
+  select count(*) from address
+  </select>
+  
+  <select id="viewData" parameterType="Integer" resultType="com.address.model.AddressDTO">
+  select * from address where num=#{num}
+  </select>
+  <!-- 삭제 -->
+  <delete id="deleteData" parameterType="Integer">
+  delete from address where num=#{num}
+  </delete>
+  
+  <!-- 수정 -->
+  <update id="updatdData">
+  updata address set tel=#{tel},name=#{name},addr=#{addr},
+  zipcode=#{zipcode} where num=#{num}
+  </update>
+  </mapper>

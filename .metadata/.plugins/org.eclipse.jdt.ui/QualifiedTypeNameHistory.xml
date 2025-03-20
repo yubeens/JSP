@@ -21,11 +21,9 @@
     <fullyQualifiedTypeName name="com.board.model.BoardDTO"/>
     <fullyQualifiedTypeName name="com.utils.JSFunction"/>
     <fullyQualifiedTypeName name="com.comm.PageUtil"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Vector"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="com.member.model.MemberDTO"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.board.model.BoardDAO"/>
     <fullyQualifiedTypeName name="com.board.model.BoardDAOImpl"/>
     <fullyQualifiedTypeName name="com.board.model.CommentDTO"/>
@@ -41,4 +39,14 @@
     <fullyQualifiedTypeName name="com.product.model.ProductDAO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.product.model.ProductDTO"/>
+    <fullyQualifiedTypeName name="java.io.InputStream"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
+    <fullyQualifiedTypeName name="com.address.config.MybatisManager"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="com.address.model.AddressDTO"/>
+    <fullyQualifiedTypeName name="com.address.model.AddressDAO"/>
 </qualifiedTypeNameHistroy>

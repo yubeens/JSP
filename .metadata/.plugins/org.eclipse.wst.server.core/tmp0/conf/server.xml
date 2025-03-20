@@ -167,7 +167,7 @@
     <!--
     <Manager pathname="SESSIONS.ser" />
     -->
-</Context></Host>
+</Context><Context docBase="C:\JSP_Work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MybatisProject01" path="/MybatisProject01" reloadable="true" source="org.eclipse.jst.jee.server:MybatisProject01"/></Host>
       
     </Engine>
   </Service>

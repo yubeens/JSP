@@ -6,6 +6,10 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+
+import com.product.model.ProductDAO;
+import com.product.model.ProductDTO;
 
 /**
  * Servlet implementation class ProductListController
@@ -26,6 +30,10 @@ public class ProductListController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		ProductDAO dao = new ProductDAO();
+		ArrayList<ProductDTO> plist = dao.productList();
+		request.setAttribute("plist", plist);		
 		request.getRequestDispatcher("productList.jsp").forward(request, response);
 	}
 
